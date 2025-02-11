@@ -1,0 +1,35 @@
+Test_acc: 0.5236422588489598
+Confusion Matrix:
+[[15504     1]
+ [14103     0]]
+ 
+ Confusion matrix
+----------------
+|   True\Pred |     0 |   1 |
+|-------------+-------+-----|
+|           0 | 15505 |   0 |
+|           1 | 14103 |   0 |
+
+
+Confusion matrix normalized by row
+----------------------------------
+|   True\Pred |   0 |   1 |
+|-------------+-----+-----|
+|           0 |   1 |   0 |
+|           1 |   1 |   0 |
+
+
+/home/navid/Desktop/Monash/Emotiv/Research/25.01.07 EEG-X/.venv/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+              precision     recall   f1-score rel. freq. abs. freq.|     biggest thieves
+
+          0       0.524      1.000      0.687      0.524      15505|     1: 0.000,
+          1       0.000      0.000      0.000      0.476      14103|     0: 1.000,
+
+----------------------------------------------------------------------------------------------------
+avg / total       0.274      0.524      0.360        1.0      29608|          
+
+********************************
+           ICA_DREAMER          
+********************************
+Best Model Test Summary: epoch: None | loss: 0.710436682094274 | accuracy: 0.5236760335044582 | precision: 0.5236760335044582 | AUROC: 0.5455140524966695 | AUPRC: 0.49964890716211874 | 

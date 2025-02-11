@@ -1,0 +1,41 @@
+{
+    "C_Pos_Encoding": [
+        "Location"
+    ],
+    "Evaluation": "In-domain",
+    "ICA": true,
+    "Input_Embedding": "Channel-wise",
+    "Model": "EEG2Rep",
+    "Norm": false,
+    "T_Pos_Encoding": [
+        "Sin"
+    ],
+    "Training_mode": "Pretraining_Finetuning",
+    "batch_size": 256,
+    "console": false,
+    "data_dir": "datasets/ICA_STEW",
+    "dim_ff": 256,
+    "dropout": 0.1,
+    "emb_size": 16,
+    "finetune_epochs": 10,
+    "gpu": 1,
+    "key_metric": "loss",
+    "layers": 4,
+    "lr": 0.001,
+    "mask_ratio": 0.5,
+    "momentum": 0.99,
+    "num_heads": 8,
+    "output_dir": "Results/Pretraining_Finetuning/datasets/ICA_STEW/2025-02-07_11-10",
+    "patch_size": 128,
+    "patch_stride": 32,
+    "pre_layers": 2,
+    "pred_dir": "Results/Pretraining_Finetuning/datasets/ICA_STEW/2025-02-07_11-10/predictions",
+    "pretrain_epochs": 200,
+    "print_interval": 10,
+    "problem": "ICA_STEW",
+    "save_dir": "Results/Pretraining_Finetuning/datasets/ICA_STEW/2025-02-07_11-10/checkpoints",
+    "seed": 1234,
+    "tensorboard_dir": "Results/Pretraining_Finetuning/datasets/ICA_STEW/2025-02-07_11-10/tb_summaries",
+    "val_interval": 5,
+    "val_ratio": 0.2
+}

@@ -15,7 +15,7 @@ from sklearn.metrics import f1_score
 
 
 
-def Zero_Shot(Data):
+def Linear_Prob(Data):
     epoch_metrics = OrderedDict()
     # Path to the JSON file
     json_file_path = 'Checkpoints/TUAB/TUAB_configuration.json'
@@ -28,7 +28,7 @@ def Zero_Shot(Data):
     config['Data_shape'] = Data['All_train_data'].shape
     model = model_factory(config)
     # Encoder = load_model(model, 'Checkpoints/STEW_Pretrained.pth')
-    Encoder = load_model(model, 'Checkpoints/TUAB/TUABmodel_last.pth')
+    Encoder = load_model(model, 'Checkpoints/TUAB/TUAB_Axon.pth')
 
     Encoder.to(config['device'])
 

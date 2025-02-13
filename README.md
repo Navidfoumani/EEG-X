@@ -14,7 +14,7 @@ a global technology company specializing in the development and manufacturing of
 #### EEG-X Paper: [comming soon](https:)
 
 
-This is a PyTorch implementation of **EEG-X: A Universal Framework for Robust EEG Representation Learning **
+This is a PyTorch implementation of **EEG-X: A Universal Framework for Robust EEG Representation Learning**
 <p align="center">
     <img src="Figs/EEG-X.png">
 </p> 
@@ -38,7 +38,7 @@ This is a PyTorch implementation of **EEG-X: A Universal Framework for Robust EE
 
 _Instructions refer to Unix-based systems (e.g. Linux, MacOS)._
 
-This code has been tested with `Python 3.7` and `3.8`.
+This code has been tested with `Python 3.9.12`.
 
 `pip install -r requirements.txt`
 

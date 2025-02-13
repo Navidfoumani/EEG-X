@@ -30,14 +30,11 @@ import os
 import pandas as pd
 import argparse
 
-def STEW(config):
-    # Define the data path
-    data_path = config['raw_data_path']
+def STEW(data_path):
     # Initialize lists to hold the data, labels, and IDs
     X_datas = []
     y_datas = []
     id_datas = []
-
     # Loop through the files in the directory
     for file_name in os.listdir(data_path):
         if file_name.startswith('sub') and file_name.endswith('.txt'):
@@ -62,13 +59,14 @@ def STEW(config):
     print(f"Number of Subjects: {len(list(set(id_datas)))}")  # Expected length: 48
     return X_datas, y_datas, id_datas
 
-
+def ICA():
+    return
 
 if __name__ == '__main__':
     # Define the argument parser
     parser = argparse.ArgumentParser(description='Process EEG data from the STEW dataset.')
-    parser.add_argument('--raw_data_path', type=str, default='/data/data_downstream_task/STEW/Raw/', help='Path to the raw EEG data')
-    parser.add_argument('--save_path', type=str, default='/data/data_downstream_task/Processed/', help='Path to save the cleaned EEG data')
+    parser.add_argument('--raw_data_path', type=str, default='datasets/Data_files/Raw/STEW', help='Path to the raw EEG data')
+    parser.add_argument('--save_path', type=str, default='datasets/Processed/', help='Path to save the cleaned EEG data')
     parser.add_argument('--window_size', type=int, default=256, help='Size of the data windows for segmentation')
     parser.add_argument('--stride', type=int, default=256, help='Stride for the data windows')
     parser.add_argument('--cleaning', type=str, default='ICA', choices=['ICA', 'rASR', 'Non'], help='Cleaning method to apply')
@@ -78,4 +76,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     # Call the STEW function with the parsed arguments
-    STEW(args.raw_data_path)
+    X_datas, y_datas, id_datas = STEW(args.raw_data_path)
+
+
+    
